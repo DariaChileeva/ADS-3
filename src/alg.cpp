@@ -8,15 +8,15 @@ int cbinsearch(int *arr, int size, int value) {
         int mid = (right + left) / 2;
         if (arr[mid] == value) {
             count++;
-            int p = mid - 1;
-            while (p >= 0 && arr[p] == value) {
+            int per = mid - 1;
+            while (per >= 0 && arr[per] == value) {
                 count++;
-                p--;
+                per--;
             }
-            p = mid + 1;
-            while (p < size && arr[p] == value) {
+            per = mid + 1;
+            while (per < size && arr[per] == value) {
                 count++;
-                p++;
+                per++;
             }
             break;
         } else if (arr[mid] < value) {
